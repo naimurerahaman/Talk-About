@@ -1,6 +1,6 @@
 <div class="container">
     <h2 class="header">Login</h2>
-    <form action="server/request.php" method="post">
+    <form action="./server/request.php" method="post">
         
         <div class="col-6 offset-sm-3 margin-bottom-15">
             <label for="email" class="form-label">Email</label>

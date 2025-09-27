@@ -14,7 +14,7 @@ if(isset($_POST['signup'])){
     $result = $user->execute();
     if($result){
         echo "User registered successfully";
-        $_SESSION['user'] = ["username"=>$username,"email"=>$email];
+        $_SESSION["user"] = ["username"=>$username,"email"=>$email];
         header("location: /talk-about");
     }
     else{
@@ -31,7 +31,6 @@ if(isset($_POST['signup'])){
         foreach($result as $row){
             $username = $row['username'];
         }
-        echo $username ;
         $_SESSION["user"] = ["username"=>$username,"email"=>$email];
         header("location: /talk-about");
     }
