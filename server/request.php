@@ -63,7 +63,7 @@ values(NULL,'$title','$description','$category_id','$user_id');
     } else {
         echo "Question is added to website";
     }
-} else if (isset($_POST["answer"])) {
+} else if (isset($_POST["answer"])){
     $answer = $_POST['answer'];
     $question_id = $_POST['question_id'];
     $user_id = $_SESSION['user']['user_id'];
@@ -78,14 +78,5 @@ values(NULL,'$answer','$question_id','$user_id');
         header("location: /talk-about?q-id=$question_id");
     } else {
         echo "Answer is not submitted";
-    }
-} else if (isset($_GET["delete"])) {
-    echo $qid = $_GET["delete"];
-    $query = $conn->prepare("delete from questions where id =$qid");
-    $result = $query->execute();
-    if ($result) {
-        header("location: /talk-about");
-    } else {
-        echo "Question not deleted";
     }
 }
