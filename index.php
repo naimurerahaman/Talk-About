@@ -18,6 +18,8 @@
         include 'client/login.php';
     } else if (isset($_GET['ask'])){
         include 'client/ask.php';
+    } else {
+        include 'client/questions.php';
     }
     ?>
 
