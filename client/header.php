@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+  <div class="container">
+    <a class="navbar-brand" href="./">
       <img src="./public/logo.png" alt="logo" width="200" height="68" class="logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
           
         <?php } else { ?>
           <li class="nav-item">
-            <a class="nav-link" href="./server/request.php?logout=true">Log out</a>
+            <a class="nav-link" href="./server/request.php?logout=true">Log out (<?php echo ucfirst($_SESSION['user']['username']) ?>)</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="?ask=true">Ask A Question</a>
@@ -32,12 +32,14 @@
           </li>
         <?php } ?>
         <li class="nav-item">
-          <a class="nav-link" href="./">Category</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="?latest=true">Latest Question</a>
         </li>
       </ul>
+      
     </div>
+    <form class="d-flex" action="">
+        <input class="form-control me-2" name="search" type="search" placeholder="Search Questions">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
   </div>
 </nav>

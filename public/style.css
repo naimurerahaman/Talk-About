@@ -1,19 +1,6 @@
-.header{
-    text-align: center;
-}
 
 .margin-bottom-15{
     margin-bottom: 15px;
-}
-
-.question-list {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-}
-.question-list h4{
-    margin: 0;
-    padding: 0;
 }
 
 .question-list a, .question-title { 
@@ -26,4 +13,373 @@
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
     padding: 5px;
+}
+////////////////////////////////////////////////////////////////
+
+/* Global reset & typography */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #f9fafc);
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    margin-top: 40px;
+    max-width: 1200px;
+}
+
+/* Section header */
+.header {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #111827;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+/* Question card */
+.question-list {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(229, 231, 235, 0.6);
+    cursor: pointer;
+}
+
+.question-list:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Question title */
+.my-question a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+    transition: color 0.25s ease;
+}
+
+.my-question a:hover {
+    color: #2563eb;
+}
+
+/* Delete action button */
+.my-question a.delete-link {
+    font-size: 14px;
+    margin-left: 20px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    color: #fff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.my-question a.delete-link:hover {
+    background: linear-gradient(90deg, #b91c1c, #991b1b);
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.col-4 {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+/* Sidebar headings */
+.col-4 h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+/* Category list styling */
+.col-4 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.col-4 ul li {
+    margin-bottom: 14px;
+}
+
+.col-4 ul li a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #374151;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.col-4 ul li a:hover {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: #fff;
+    transform: translateX(6px);
+}
+
+/* ASk page design *////////////////////////////////////////////
+/* Ask Question page container */
+
+
+/* Form card */
+form {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+/* Labels */
+.form-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+/* Inputs + textarea */
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    background: #f9fafb;
+    color: #111827;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 18px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    background: #fff;
+}
+
+/* Textarea tweak */
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button */
+.btn.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background: linear-gradient(90deg, #1e40af, #7e22ce);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* NAv Bar design *///////////////////////////////////////////////
+
+/* Modern navbar container */
+.navbar {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 14px 0;
+}
+
+/* Logo */
+.navbar-brand img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 18px;
+    color: #374151 !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: #fff !important;
+}
+
+/* Search box */
+form.d-flex {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+form.d-flex input {
+    border-radius: 50px;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    transition: all 0.3s ease;
+}
+
+form.d-flex input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    background: #fff;
+}
+
+form.d-flex button {
+    margin-left: 10px;
+    border-radius: 50px;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+form.d-flex button:hover {
+    background: linear-gradient(90deg, #1e40af, #7e22ce);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Mobile nav toggler */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(40%);
+}
+/* ---------- NAVBAR ALIGNMENT FIX ---------- */
+/* Make the navbar container a flex row and vertically center everything */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;          /* spacing between logo / nav / search */
+  flex-wrap: nowrap;
+}
+
+/* Ensure the collapse area behaves as a flex row and can grow */
+.navbar-collapse {
+  display: flex !important;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+/* Keep nav items aligned vertically */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slightly reduce vertical padding on nav-links so they center better */
+.navbar-nav .nav-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Ensure brand/logo is vertically centered and doesn't push layout */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.navbar-brand img {
+  height: 56px;    /* adjust to the height you want — keeps logo aligned */
+  width: auto;
+}
+
+/* Search form aligned to the right and centered vertically */
+form.d-flex {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;     /* make sure bootstrap margins don't push it up */
+}
+
+/* Make input and button identical heights so they line up visually */
+form.d-flex input {
+  height: 44px;                  /* same height for visual alignment */
+  line-height: 44px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 0;
+}
+
+form.d-flex button {
+  height: 44px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Mobile: wrap items and make search full width under the toggler */
+@media (max-width: 991px) {
+  .navbar .container { flex-wrap: wrap; }
+  form.d-flex {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: flex-end; /* keep button on the right */
+  }
+  form.d-flex input { flex: 1 1 auto; max-width: calc(100% - 110px); }
+  form.d-flex button { width: 100px; flex: 0 0 100px; }
 }

@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class="heading">Ask A Question </h1>
+<h1 class="header">Ask A Question </h1>
 
 <form action="./server/request.php" method="post">
 
