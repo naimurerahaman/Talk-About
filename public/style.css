@@ -14,7 +14,7 @@
     margin-bottom: 10px;
     padding: 5px;
 }
-////////////////////////////////////////////////////////////////
+
 
 /* Global reset & typography */
 body {
@@ -138,12 +138,7 @@ body {
     color: #fff;
     transform: translateX(6px);
 }
-
-/* ASk page design *////////////////////////////////////////////
-/* Ask Question page container */
-
-
-/* Form card */
+/* Form styling */
 form {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -208,10 +203,7 @@ textarea.form-control {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
-
-/* NAv Bar design *///////////////////////////////////////////////
-
-/* Modern navbar container */
+/* Navbar */
 .navbar {
     background: rgba(255, 255, 255, 0.7) !important;
     backdrop-filter: blur(12px);
